@@ -1,116 +1,72 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-image: url('https://greenpng.com/wp-content/uploads/2022/08/Fundo-xadrez-1024x757.png'); 
-    background-size: cover;
-    background-position: center;
-}
-
-.header {
-    width: 100%;
-    max-width: 800px;
-    background-color: #4CAF50;
-    color: white;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px 0;
+    height: 100vh;
 }
 
-.logo {
-    height: 50px;
-    margin-right: 20px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.container {
-    background-color: #ffffff;
+#todo-container {
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    z-index: 1;
-    position: relative;
+    width: 300px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+#todo-container h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.form-group {
+#todo-form {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-label {
-    margin-bottom: 5px;
-    color: #555555;
-}
-
-input[type="text"] {
-    padding: 10px;
-    border: 1px solid #cccccc;
+#todo-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    margin-right: 10px;
 }
 
-button {
-    padding: 10px;
+#add-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+#add-button:hover {
+    background-color: #0056b3;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+#task-count {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todo-list li {
     padding: 8px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
 }
 
-th {
-    background-color: #f2f2f2;
-    color: #333333;
-}
-
-td {
-    color: #555555;
-}
-
-.footer {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: #f4f4f9;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #555555;
+#todo-list li.completed {
+    text-decoration: line-through;
+    color: #999;
 }
