@@ -3,47 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Contatos</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <img src="./images/logo.png" alt="Logotipo" class="logo">
-        <h1>Cadastro de Contatos</h1>
-    </header>
-
-    <div class="container">
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" required>
-            </div>
-            <button type="submit">Cadastrar</button>
+    <div id="todo-container">
+        <h2>Lista de Tarefas</h2>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Adicione uma tarefa">
+            <button type="submit" id="add-button">Adicionar</button>
         </form>
-
-        <table id="contactsTable">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <p id="task-count">Total de tarefas: 0</p>
+        <ul id="todo-list"></ul>
     </div>
 
-    <footer class="footer">
-        <p>Desenvolvido por Sua Empresa</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
